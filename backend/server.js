@@ -4,7 +4,11 @@ const fetch = require('node-fetch'); // ← must use node-fetch v2
 
 
 const app = express();
-app.use(cors());
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://leetcode-card-generator-yajw.vercel.app",
+}));
 app.use(express.json());
 
 app.post('/api/leetcode', async (req, res) => {

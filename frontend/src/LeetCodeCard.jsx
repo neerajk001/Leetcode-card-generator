@@ -12,7 +12,8 @@ export default function LeetCodeCard() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("http://localhost:5000/api/leetcode", {
+     const res = await fetch("https://leetcode-card-generator.onrender.com/api/leetcode", {
+
         method: "POST",
         headers: {
           "Content-Type": "application/json",
